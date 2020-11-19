@@ -1,0 +1,37 @@
+<main>
+
+  <h1 class="heading">Archiv</h1>
+
+    <div class="filter">
+      <div class="menu">
+        <div (click)="filterByTag(tag)" *ngFor="let tag of filter" class="filter-tag" [class.active]="activeTag === tag">
+          <p>{{tag}}</p>
+        </div>
+      </div>
+    </div>
+
+
+
+  <div *ngFor="let project of projects" class="project-box">
+
+    <div class="card" *ngIf="filteredArray.includes(project) || filteredArray.length === 0">
+      <div class="title-and-tags">
+        <h2 class="heading">{{project.title}}</h2>
+
+        <div class="tags">
+          <p *ngFor="let projectTag of project.tags" class="tag">{{projectTag}} &nbsp;</p>
+        </div>
+
+      </div>
+
+      <div class="links">
+        <a href="{{project.url}}" target="_blank">Link</a>
+        <a href="{{project.git}}" target="_blank">Github</a>
+      </div>
+    </div>
+
+  </div>
+
+  <button (click)="scrollToTop()" class="toTopButton">nach oben</button>
+
+</main>

@@ -1,0 +1,215 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+$action-color: #5cb138;
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .heading {
+    margin: 5px 0 10px 0;
+    font-size: 3rem;
+    text-align: center;
+    color: #efe7e7;
+    text-shadow: 2px -2px 2px #ba0707;
+  }
+
+  .filter {
+    user-select: none;
+
+    h1 {
+      font-size: 1.7rem;
+      color: $action-color;
+    }
+
+    .active {
+      color: $action-color !important;
+      border-bottom: 1px solid $action-color;
+      font-weight: bold;
+    }
+
+    @media (min-width: 1100px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .menu {
+        display: none;
+      }
+
+      &:hover {
+
+        .menu {
+          display: flex;
+
+          .filter-tag {
+            margin: 0 15px;
+            color: white;
+
+            p {
+              text-align: center;
+            }
+
+            &:hover {
+              color: $action-color;
+              cursor: pointer;
+              border-bottom: 1px solid $action-color;
+              font-weight: bold;
+
+              p {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1100px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .filter-tag {
+        margin: 0 15px;
+        color: white;
+
+        p {
+          text-align: center;
+        }
+      }
+
+      .menu {
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 650px) {
+          flex-wrap: wrap;
+        }
+
+        &:active, &:hover {
+
+          .filter-tag {
+            margin: 0 15px;
+            color: white;
+
+            p {
+              text-align: center;
+            }
+
+            &:hover {
+              color: $action-color;
+              cursor: pointer;
+              border-bottom: 1px solid $action-color;
+              font-weight: bold;
+
+              p {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .project-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card {
+      box-sizing: border-box;
+      width: 75%;
+      max-width: 750px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-radius: 4px;
+      margin: 10px 0;
+      padding: 25px;
+      background-color: #f6f1f1;
+      box-shadow: 2px -2px 4px #ba0707;
+
+      @media (max-width: 400px) {
+        flex-direction: column;
+      }
+
+      .links, .title-and-tags {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .title-and-tags {
+
+        .heading {
+          color: #1c4808;
+          text-align: start;
+          font-size: 1.5rem;
+          text-shadow: none;
+        }
+
+        .tags {
+          display: flex;
+          flex-wrap: wrap;
+
+          .tag {
+            font-size: 0.8rem;
+            margin: 0;
+          }
+        }
+      }
+
+      .links {
+        align-items: center;
+
+        @media (max-width: 500px) {
+          flex-direction: row;
+        }
+
+        a {
+          font-weight: bold;
+          color: $action-color;
+          text-decoration: none;
+          margin: 15px 15px 0 0;
+
+          &:hover, &:active {
+            cursor: pointer;
+            transform: scale(1.2);
+            border-bottom: 1px solid $action-color;
+          }
+        }
+      }
+
+      @media (max-width: 500px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .toTopButton {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    border: none;
+    outline: none;
+    user-select: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: $action-color;
+    font-weight: bold;
+    color: black;
+
+    &:active {
+      background-color: #302c2c;
+      color: $action-color;
+    }
+  }
+
+}
