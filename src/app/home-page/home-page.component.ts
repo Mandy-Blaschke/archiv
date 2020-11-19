@@ -27,7 +27,7 @@ export class HomePageComponent implements OnInit {
     {
       title: 'ToDo-Liste',
       text: 'Einfache ToDo-Liste.',
-      git: 'https://github.com/Mandy-Blaschke/to-do-list',
+      git: 'https://github.com/Mandy-Blaschke/todo-list',
       url: '/assets/to-do-list/',
       tags: ['HTML', 'CSS', 'SCSS', 'JavaScript', 'TypeScript', 'Angular'],
     },
@@ -41,7 +41,7 @@ export class HomePageComponent implements OnInit {
     {
       title: 'Kundenverwaltung',
       text: 'Diese Anwendung diente ausschließlich dem Lern-Effekt und ist nicht responsive.',
-      git: 'https://github.com/Mandy-Blaschke/kund/',
+      git: 'https://github.com/Mandy-Blaschke/kundenverwaltung',
       url: '/assets/kund/',
       tags: ['HTML', 'CSS', 'SCSS', 'JavaScript', 'TypeScript', 'Angular'],
     },
