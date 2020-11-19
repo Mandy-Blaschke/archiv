@@ -18,6 +18,9 @@ main {
 
   .filter {
     user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h1 {
       font-size: 1.7rem;
@@ -30,84 +33,41 @@ main {
       font-weight: bold;
     }
 
-    @media (min-width: 1100px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .filter-tag {
+      margin: 0 15px;
+      color: white;
 
-      .menu {
-        display: none;
-      }
-
-      &:hover {
-
-        .menu {
-          display: flex;
-
-          .filter-tag {
-            margin: 0 15px;
-            color: white;
-
-            p {
-              text-align: center;
-            }
-
-            &:hover {
-              color: $action-color;
-              cursor: pointer;
-              border-bottom: 1px solid $action-color;
-              font-weight: bold;
-
-              p {
-                transform: scale(1.1);
-              }
-            }
-          }
-        }
+      p {
+        text-align: center;
       }
     }
 
-    @media (max-width: 1100px) {
+    .menu {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: center;
 
-      .filter-tag {
-        margin: 0 15px;
-        color: white;
-
-        p {
-          text-align: center;
-        }
+      @media (max-width: 650px) {
+        flex-wrap: wrap;
       }
 
-      .menu {
-        display: flex;
-        justify-content: center;
+      &:active, &:hover {
 
-        @media (max-width: 650px) {
-          flex-wrap: wrap;
-        }
+        .filter-tag {
+          margin: 0 15px;
+          color: white;
 
-        &:active, &:hover {
+          p {
+            text-align: center;
+          }
 
-          .filter-tag {
-            margin: 0 15px;
-            color: white;
+          &:hover {
+            color: $action-color;
+            cursor: pointer;
+            border-bottom: 1px solid $action-color;
+            font-weight: bold;
 
             p {
-              text-align: center;
-            }
-
-            &:hover {
-              color: $action-color;
-              cursor: pointer;
-              border-bottom: 1px solid $action-color;
-              font-weight: bold;
-
-              p {
-                transform: scale(1.1);
-              }
+              transform: scale(1.1);
             }
           }
         }
