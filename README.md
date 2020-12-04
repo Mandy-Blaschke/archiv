@@ -1,5 +1,5 @@
 # Archiv
 
 - Erstellung im Rahmen des Selbststudiums 
-- Archiv für ältere Projekte
-- Ansicht unter: [Archiv](https://mb89-projekt-archiv.web.app/)
+- ehemaliges Archiv für ältere Projekte (*heute alles auf meiner Website*)
+- Ansicht unter: [Archiv](https://mandy-blaschke.de/assets/projects/archiv/#/home)
